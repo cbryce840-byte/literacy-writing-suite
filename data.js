@@ -29,7 +29,17 @@ const masterPools = {
         {sentence: ["She", "wore", "a", "fancy", "party", "dress."]},
         {sentence: ["Put", "tasty", "sauce", "on", "the", "pasta."]},
         {sentence: ["Drink", "a", "glass", "of", "orange", "juice."]},
-        {sentence: ["Use", "a", "crayon", "to", "trace", "letters."]}
+        {sentence: ["Use", "a", "crayon", "to", "trace", "letters."]},
+        {sentence: ["The", "circus", "clown", "made", "us", "smile."]},
+        {sentence: ["A", "cell", "phone", "is", "very", "smart."]},
+        {sentence: ["She", "will", "gracefully", "dance", "on", "stage."]},
+        {sentence: ["Ice", "cream", "is", "cold", "and", "sweet."]},
+        {sentence: ["His", "bicycle", "has", "shiny", "wheels."]},
+        {sentence: ["We", "live", "in", "a", "busy", "city."]},
+        {sentence: ["He", "spent", "every", "single", "cent."]},
+        {sentence: ["Wash", "your", "face", "before", "bed."]},
+        {sentence: ["Add", "rice", "to", "the", "hot", "soup."]},
+        {sentence: ["Trace", "the", "dotted", "lines", "carefully."] }
     ],
     softG: [
         {sentence: ["The", "shiny", "gem", "is", "bright", "red."]},
@@ -61,7 +71,17 @@ const masterPools = {
         {sentence: ["A", "carrot", "is", "a", "healthy", "vegetable."]},
         {sentence: ["Be", "gentle", "with", "the", "little", "puppy."]},
         {sentence: ["The", "brave", "general", "led", "the", "way."]},
-        {sentence: ["Solar", "panels", "generate", "clean", "power."]}
+        {sentence: ["Solar", "panels", "generate", "clean", "power."]},
+        {sentence: ["The", "gym", "teacher", "blew", "his", "whistle."]},
+        {sentence: ["A", "huge", "elephant", "walked", "by."]},
+        {sentence: ["The", "magic", "show", "was", "amazing."]},
+        {sentence: ["A", "gentle", "breeze", "cooled", "the", "air."]},
+        {sentence: ["The", "engine", "started", "with", "a", "roar."]},
+        {sentence: ["Keep", "germs", "away", "by", "washing", "hands."]},
+        {sentence: ["She", "baked", "sweet", "chocolate", "fudge."]},
+        {sentence: ["The", "bird", "flew", "out", "of", "its", "cage."]},
+        {sentence: ["He", "read", "every", "single", "page."]},
+        {sentence: ["A", "bright", "gem", "sparkled", "in", "the", "light."] }
     ],
     spellingFill: Array.from({length: 40}, (_, i) => ({
         q: `Spelling Fill-in #${i+1}: Choose the missing letter for "C_t" (Animal)`,
@@ -76,24 +96,20 @@ const masterPools = {
     spellingSentence: Array.from({length: 40}, (_, i) => ({
         sentence: ["We", "can", "spell", "word", "number", `${i+1}`, "correctly."]
     })),
+    // 40 True Question Mark Sentence Building Activities
     punctQuestion: Array.from({length: 40}, (_, i) => ({
-        q: `Question Mark #${i+1}: Which mark goes at the end of: "Where is the dog"`,
-        opts: ["?", ".", "!", ","],
-        ans: 0
+        sentence: ["Where", "is", "the", "blue", "ball", `number`, `${i+1}`, "?"]
     })),
+    // 40 True Comma List Activities
     punctComma: Array.from({length: 40}, (_, i) => ({
-        q: `Comma Practice #${i+1}: Where does the list comma belong in: "apples bananas and pears"`,
-        opts: ["apples, bananas, and", "apples bananas,", "none"],
-        ans: 0
+        sentence: ["I", "like", "apples,", "bananas,", "and", "grapes", `${i+1}`, "."]
     })),
+    // 40 True Period Sentence Activities
     punctPeriod: Array.from({length: 40}, (_, i) => ({
-        q: `Full Stop Practice #${i+1}: Which mark ends a clear statement: "The cat slept"`,
-        opts: [".", "?", "!", ","],
-        ans: 0
+        sentence: ["The", "cat", "is", "sleeping", "on", "the", "rug", `${i+1}`, "."]
     })),
+    // 40 True Exclamation Sentence Activities
     punctExclamation: Array.from({length: 40}, (_, i) => ({
-        q: `Exclamation Practice #${i+1}: Which mark shows excitement: "Look at that big balloon"`,
-        opts: ["!", "?", ".", ","],
-        ans: 0
+        sentence: ["What", "a", "wonderful", "surprise", "this", "is", `${i+1}`, "!"]
     })
 };
