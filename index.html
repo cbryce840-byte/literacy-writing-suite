@@ -385,14 +385,17 @@
             }
         }
 
-        function loadSentenceActivity(item) {
+                function loadSentenceActivity(item) {
             placedWords = [];
             const targetArea = document.getElementById('target-area');
             const bankArea = document.getElementById('bank-area');
             targetArea.innerHTML = '';
             bankArea.innerHTML = '';
 
-            let shuffled = [...item.sentence].map((w, idx) => ({text: w, id: idx})).sort(() => Math.random() - 0.5);
+            // Safety fallback if item.sentence is missing
+            let wordsArray = (item && item.sentence) ? item.sentence : ["Please", "refresh", "page", "or", "add", "words."];
+
+            let shuffled = [...wordsArray].map((w, idx) => ({text: w, id: idx})).sort(() => Math.random() - 0.5);
             shuffled.forEach(obj => {
                 const tile = document.createElement('div');
                 tile.className = 'word-tile';
@@ -406,6 +409,7 @@
                 bankArea.appendChild(tile);
             });
         }
+
 
         function renderTarget() {
             const targetArea = document.getElementById('target-area');
